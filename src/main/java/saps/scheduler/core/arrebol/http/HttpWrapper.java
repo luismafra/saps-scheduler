@@ -50,10 +50,9 @@ public class HttpWrapper {
   }
 
   private static String extractHttpEntity(HttpResponse response, HttpUriRequest request) {
-    HttpEntity entity = null;
+    HttpEntity entity = response.getEntity();
 
     try {
-      entity = response.getEntity();
 
       int statusCode = response.getStatusLine().getStatusCode();
 
